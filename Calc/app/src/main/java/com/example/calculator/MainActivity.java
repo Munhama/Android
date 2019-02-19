@@ -104,15 +104,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btPlus:
                 operat = 1;
+                textView.setText(Integer.toString(num1) + " " + "+");
                 break;
             case R.id.btMinus:
                 operat = 2;
+                textView.setText(Integer.toString(num1) + " " + "-");
                 break;
             case R.id.btMul:
                 operat = 3;
+                textView.setText(Integer.toString(num1) + " " + "*");
                 break;
             case R.id.btDev:
                 operat = 4;
+                textView.setText(Integer.toString(num1) + " " + "/");
                 break;
             case R.id.btEqual:
                 switch (operat){
@@ -134,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             break;
                         }
                         else {
-                            result = num1 / num2;
+                            result = (double) num1 / (double) num2;
                             textView.setText(Double.toString(result));
                             break;
                         }
@@ -148,13 +152,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void ClickNumber(int num){
+        String zn = "";
+        switch (operat){
+            case 1:
+                zn = "+";
+                break;
+            case 2:
+                zn = "-";
+                break;
+            case 3:
+                zn = "*";
+                break;
+            case 4:
+                zn = "/";
+                break;
+        }
         if(operat==0){
             num1 = num1*10 + num;
             textView.setText(Integer.toString(num1));
         }
         else {
             num2 = num2*10 + num;
-            textView.setText(Integer.toString(num2));
+            textView.setText(Integer.toString(num1) + " " + zn + " " + Integer.toString(num2));
         }
     }
 }
