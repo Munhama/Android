@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Tab</string>
+    
+    <string-array name="spis">
+        <item>Vlad</item>
+        <item>Artyem</item>
+        <item>Alex</item>
+        <item>Nic</item>
+        <item>Stas</item>
+        <item>Tommy</item>
+        <item>Johny</item>
+        <item>Sam</item>
+        <item>Jam</item>
+        <item>Max</item>
+        <item>Bil</item>
+        <item>Stan</item>
+    </string-array>
+</resources>
